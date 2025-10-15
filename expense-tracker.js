@@ -1,6 +1,7 @@
 import { Command } from "commander";
 import fs from "fs";
 import path from 'path';
+import { json } from "stream/consumers";
 import { fileURLToPath } from "url";
 
 const program = new Command();
@@ -22,6 +23,7 @@ program
     console.table(jsonData);
   })
 
+// expense-tracker add --description "Dinner" --amount 10
 program
   .command('add')
   .option('--description <string>')
@@ -48,8 +50,45 @@ program
     console.table(jsonData);
   })
 
+// expense-tracker summary
+program
+  .command('summary')
+  .action(() => {
+    const jsonData = fs.readFileSync(dataFilePath) ? JSON.parse(fs.readFileSync(dataFilePath, 'utf8')) : [];
+    let totalPrice = 0;
+
+    jsonData.forEach(entry => {
+      totalPrice += entry.amount;
+    });
+
+    console.log(`Total expenses: ${totalPrice}`)
+  })
+
+// expense-tracker delete --id 2
+program
+  .command('delete')
+  .option('--id <number>')
+  .action((options) => {
+    const jsonData = fs.readFileSync(dataFilePath) ? JSON.parse(fs.readFileSync(dataFilePath, 'utf8')) : [];
+
+    const updatedData = jsonData.filter(entry => entry.id !== parseInt(options.id));
+
+    if (jsonData.length === updatedData.length) {
+      console.log(`No entry found with id ${options.id}`);
+    } else {
+      fs.writeFileSync(dataFilePath, JSON.stringify(updatedData, null, 2), 'utf8');
+      console.log(`Entry with id ${options.id} has been removed.`);
+    }
+  })
+
+
+
+
+
+
+
+
+
+
+
 program.parse();
-
-const options = program.opts();
-
-
