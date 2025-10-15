@@ -38,6 +38,11 @@ program
     // Format date as YYYY-MM-DD
     const formattedDate = new Date().toISOString().split("T")[0];
 
+    if (parseInt(options.amount) <= 0) {
+      console.log(`Amount should be greater than 0.`);
+      return;
+    }
+
     const newExpense = {
       id: nextId,
       description: options.description,
