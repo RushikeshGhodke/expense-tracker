@@ -1,7 +1,6 @@
 import { Command } from "commander";
 import fs from "fs";
 import path from 'path';
-import { json } from "stream/consumers";
 import { fileURLToPath } from "url";
 
 const program = new Command();
