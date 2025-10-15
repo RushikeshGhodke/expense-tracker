@@ -1,0 +1,30 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "a simple expense tracker to manage your finances, using nodejs and commanderjs",
+  "keywords": [
+    "expense-tracker",
+    "node",
+    "rushikeshghodke",
+    "commanderjs"
+  ],
+  "homepage": "https://github.com/RushikeshGhodke/expense-tracker#readme",
+  "bugs": {
+    "url": "https://github.com/RushikeshGhodke/expense-tracker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RushikeshGhodke/expense-tracker.git"
+  },
+  "license": "MIT",
+  "author": "rushikeshghodke",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "commander": "^14.0.1",
+    "os": "^0.1.2"
+  }
+}
