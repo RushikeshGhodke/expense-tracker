@@ -304,7 +304,7 @@ This project is licensed under the ISC License. See the LICENSE file for details
 
 - **Project Source:** [roadmap.sh Expense Tracker Project](https://roadmap.sh/projects/expense-tracker)
 - **CLI Framework:** [Commander.js](https://github.com/tj/commander.js)
-- **Author:** [Rushikesh Ghodke]
+- **Author:** [RushikeshGhodke](https://github.com/rushikeshghodke)
 
 ---
 
