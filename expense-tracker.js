@@ -18,10 +18,8 @@ program
       return;
     }
 
-    if (options.list) {
-      const jsonData = JSON.parse(fs.readFileSync(dataFilePath, 'utf8'))
-      console.table(jsonData);
-    }
+    const jsonData = JSON.parse(fs.readFileSync(dataFilePath, 'utf8'))
+    console.table(jsonData);
   })
 
 program
