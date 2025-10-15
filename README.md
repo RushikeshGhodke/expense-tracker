@@ -44,7 +44,7 @@ The application meets the following requirements from [roadmap.sh](https://roadm
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/expense-tracker.git
+   git clone https://github.com/rushikeshghodke/expense-tracker.git
    ```
 
 2. **Navigate to the project directory:**
@@ -304,7 +304,7 @@ This project is licensed under the ISC License. See the LICENSE file for details
 
 - **Project Source:** [roadmap.sh Expense Tracker Project](https://roadmap.sh/projects/expense-tracker)
 - **CLI Framework:** [Commander.js](https://github.com/tj/commander.js)
-- **Author:** [Your Name]
+- **Author:** [Rushikesh Ghodke]
 
 ---
 
@@ -314,7 +314,7 @@ This project is licensed under the ISC License. See the LICENSE file for details
 
 ```bash
 # Clone and run in 4 steps
-git clone https://github.com/yourusername/expense-tracker.git
+git clone https://github.com/rushikeshghodke/expense-tracker.git
 cd expense-tracker
 npm install
 node expense-tracker.js add --description "First expense" --amount 25
